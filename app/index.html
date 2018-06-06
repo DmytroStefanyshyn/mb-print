@@ -1,72 +1,166 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>nota/Dmytro</title>
+    <title>mb-print/Dmytro</title>
     <meta chrset="utf-8">
     <meta name="viewport" content="width=device-width"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />	
-<link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="icons/stylesheet.css" />	
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<link rel="stylesheet" href="css/main.css" />	
   </head>
   <body>
-    <div class="wrapper">
-      <ul class="main-menu">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Производство</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Поддержка</a></li>
-        <li><a href="#">Технологии</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <div class="sidebar">
-        <div class="sidebar__title">Производство</div>
-        <ul class="sidebar-menu">
-          <li><a href="#">ЦИФРОВОЕ</a></li>
-          <li><a href="#">ОФСЕТНОЕ</a></li>
-          <li><a href="#">ШЕЛКОГРАФИЯ</a></li>
-          <li><a href="#">ПЕРЕМЕННЫЕ ДАННЫЕ, ШТРИХ-КОДИРОВАНИЕ</a></li>
-          <li><a href="#">ОТДЕЛОЧНОЕ</a></li>
-        </ul>
-        <div class="news">
-          <div class="sidebar__title">Новости</div>
-          <div class="news__data"><span>18.08.</span>2014</div>
-          <div class="news__text">Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену<a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
-              </svg></a></div>
-          <div class="news__data"><span>18.08.</span>2014</div>
-          <div class="news__text">Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену<a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
-              </svg></a></div>
+    <div class="header clearfix">
+      <div class="wrapper"><img src="../img/header-logo.png">Полиграфия европейского уровня за умеренную цену
+        <div class="header__phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+          </svg><a href="tel:4999432094">(499)<span>943-20-94</span></a>
         </div>
       </div>
+    </div>
+    <div class="wrapper">
+      <div class="menu_opener">
+        <div class="icon-list"><span></span><span></span><span></span></div>
+      </div>
+      <ul class="main-menu">
+        <li><a href="#">Главная<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Каталог<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Услуги<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Производство<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Новости<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Поддержка<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Технологии<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        <li><a href="#">Контакты<span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+      </ul>
       <div class="content">
-        <div class="articles">
-          <div class="row"><a href="#"><img src="img/1.jpg">
-              <div class="article__title">Цифровая печать</div></a><a href="#"><img src="img/1.jpg">
-              <div class="article__title">Цифровая печать</div></a><a href="#"><img src="img/1.jpg">
-              <div class="article__title">Цифровая печать</div></a><a href="#"><img src="img/1.jpg">
-              <div class="article__title">Цифровая печать</div></a><a href="#"><img src="img/1.jpg">
-              <div class="article__title">Цифровая печать</div></a><a href="#"><img src="img/1.jpg">
-              <div class="article__title">Цифровая печать</div></a></div>
+        <div class="col-desktop-1-4">
+          <div class="sidebar">
+            <div class="main__title">Производство</div>
+            <ul class="sidebar-menu">
+              <li><a href="#">ЦИФРОВОЕ<a class="right-arrow" href="#"></a></a></li>
+              <li><a href="#">ОФСЕТНОЕ<a class="right-arrow" href="#"></a></a></li>
+              <li><a href="#">ШЕЛКОГРАФИЯ<a class="right-arrow" href="#"></a></a></li>
+              <li><a href="#">ПЕРЕМЕННЫЕ ДАННЫЕ, ШТРИХ-КОДИРОВАНИЕ<a class="right-arrow" href="#"></a></a></li>
+              <li><a href="#">ОТДЕЛОЧНОЕ<a class="right-arrow" href="#"></a></a></li>
+            </ul>
+            <div class="news">
+              <div class="main__title">Новости</div>
+              <div class="news__data"><span>18.08.</span>2014</div>
+              <div class="news__text">Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену<a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
+                  </svg></a></div>
+              <div class="news__data"><span>18.08.</span>2014</div>
+              <div class="news__text">Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену<a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-desktop-3-4">
+          <div class="slide"><img src="../img/slider.jpg"></div>
+          <div class="articles">
+            <div class="row">
+              <div class="col-phablet-1-2 col-tablet-1-3">
+                <div class="article"><a href="#">
+                    <div class="article__image"><img src="img/article-bg1.jpg"></div>
+                    <div class="article__title">Цифровая печать</div></a></div>
+              </div>
+              <div class="col-phablet-1-2 col-tablet-1-3">
+                <div class="article"><a href="#">
+                    <div class="article__image"><img src="img/article-bg2.jpg"></div>
+                    <div class="article__title">ОФСЕТНАЯ ПЕЧАТЬ</div></a></div>
+              </div>
+              <div class="col-phablet-1-2 col-tablet-1-3">
+                <div class="article"><a href="#">
+                    <div class="article__image"><img src="img/article-bg3.jpg"></div>
+                    <div class="article__title">ФИНИШНАЯ ОБРАБОТКА</div></a></div>
+              </div>
+              <div class="col-phablet-1-2 col-tablet-1-3">
+                <div class="article"><a href="#">
+                    <div class="article__image"><img src="img/article-bg4.jpg"></div>
+                    <div class="article__title">ДИЗАЙН, ВЕРСТКА, КОРРЕКТУРА, ПЕРЕВОД</div></a></div>
+              </div>
+              <div class="col-phablet-1-2 col-tablet-1-3">
+                <div class="article"><a href="#">
+                    <div class="article__image"><img src="img/article-bg5.jpg"></div>
+                    <div class="article__title">КАТАЛОГ ВЫСТАВКИ</div></a></div>
+              </div>
+              <div class="col-phablet-1-2 col-tablet-1-3">
+                <div class="article"><a href="#">
+                    <div class="article__image"><img src="img/article-bg6.jpg"></div>
+                    <div class="article__title">ПЕРЕМЕННЫЕ ДАННЫЕ, ШТРИХ-КОДИРОВАНИЕ</div></a></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="catalog">
-          <div class="sidebar__title">Каталог</div>
+          <div class="main__title col-desktop-3-4">Каталог</div>
           <div class="offers">
-            <div class="row"><a href="#">
-                <div class="img-bg"><img src="../img/offer_1.jpg"></div>
-                <div class="offer__title">Листовая продукция</div></a><a href="#">
-                <div class="img-bg"><img src="../img/offer_2.jpg"></div>
-                <div class="offer__title">Листовая продукция</div></a><a href="#">
-                <div class="img-bg"><img src="../img/offer_1.jpg"></div>
-                <div class="offer__title">Листовая продукция</div></a><a href="#">
-                <div class="img-bg"><img src="../img/offer_2.jpg"></div>
-                <div class="offer__title">Листовая продукция</div></a></div>
+            <div class="row">
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg1.jpg"></div>
+                  <div class="offer__title">Листовая продукция</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg2.jpg"></div>
+                  <div class="offer__title">Фотоальбомы</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg3.jpg"></div>
+                  <div class="offer__title">Буклеты</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg4.jpg"></div>
+                  <div class="offer__title">Брошюры</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg5.jpg"></div>
+                  <div class="offer__title">Визитки</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg6.jpg"></div>
+                  <div class="offer__title">Календари</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg7.jpg"></div>
+                  <div class="offer__title">Конверты</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg8.jpg"></div>
+                  <div class="offer__title">Папки</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg3.jpg"></div>
+                  <div class="offer__title">Наклейки, этикетки</div></a></div>
+              <div class="col-phablet-1-2 col-tablet-1-3 col-laptop-1-4"><a href="#">
+                  <div class="img-bg"><img src="../img/offer-bg4.jpg"></div>
+                  <div class="offer__title">Наклейки, этикетки</div></a></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+    <div class="wrapper_test">
+      <div class="row clearfix">
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title">fdfsd 0</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title product__title_orange">dfds 1</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title product__title_yellow">fdsfsd 2</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title">fdfsd 0</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title product__title_orange">dsadasda 1</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title product__title_yellow">dsadas 2</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title">dsadas 0</div></a></div>
+        <div class="col-tablet-1-2"><a class="product" href="#">
+            <div class="product__image"><img src="../img/article-bg1.jpg"></div>
+            <div class="product__title product__title_orange">dsadas 1</div></a></div>
+      </div>
+    </div>
+  </body><script src="../js/src.js"></script>
 </html>
