@@ -44,3 +44,4 @@ $('[data-tabtrigger]').click(function(e){
   
 })
 $('ul.tab-nav li:first-child a').click();
+
