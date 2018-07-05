@@ -5,7 +5,9 @@ $('.menu_opener').click(function(){
 })
 var hammertime = new Hammer(document);
 hammertime.on('panleft panright', function(ev) {
-  console.log(ev.type);
+  if($(ev.target).parents('.slider').length){
+    return false;
+  }
   if(ev.type == 'panright'){
     $('.menu_opener .icon-list').addClass('icon-list_opened');
     $('.main-menu').addClass('active');
@@ -50,4 +52,10 @@ $(document).ready(function(){
     dots: true,
     arrows: false
   });
+});
+
+
+$('ul.main-menu li').click(function(e){
+    $('ul.main-menu li').removeClass('active');
+    $(this).addClass('active');
 });
